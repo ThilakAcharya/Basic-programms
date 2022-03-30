@@ -4,8 +4,7 @@ while a == True:
     if status.lower() == "exit":
         a = False
     year = int(input("Year: "))
-    if year % 4 == 0:
-        if year % 100 == 0 and year % 400 == 0:
-            print("not leap year")
-        else:
-            print("leap year")
+    if year % 400 == 0 or year % 100 != 0 and year % 4 == 0:
+        print(" leap year{}".format(year))
+    else:
+        print("not leap year{}".format(year))
